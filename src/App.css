@@ -1,0 +1,1577 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+/* General Reset */
+/************ Custom Font ************/
+.rationale-regular {
+  font-family: "Rationale", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 .logo-text{
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: "Rationale", sans-serif; /* Ensure headings use the Rationale font */
+  }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Navbar Styles */
+  nav.navbar {
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32s ease-in-out;
+    background-color: #000 !important; /* Black background */
+    height: 50px;
+  }
+  
+  nav.navbar .container .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  
+  nav.navbar .container .navbar-brand img {
+    width: auto;
+    height: 50px; /* Resize the logo */
+    margin-right: 10px;
+  }
+  
+  nav.navbar .container a.navbar-brand .logo-text {
+    color: #ffffff; /* White text color */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 150; /* Bold text */
+    letter-spacing: 0.8px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  nav.navbar.scrolled a.navbar-brand .logo-text  .nav-link{
+    font-size: 20px;
+    font-family: "Rationale", sans-serif;
+  }
+  
+  nav.navbar .container a.navbar-brand .logo-text:hover {
+    color: rgb(0, 92, 145);
+  }
+  /* Navbar Toggle Button Styles */
+nav.navbar .container .navbar-toggler {
+ 
+  margin-top: auto;
+  margin-bottom: auto;
+  
+}
+
+nav.navbar .container .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Hover Styling for LinkContainer in Nav */
+nav.navbar .nav-link {
+  color: #d3d3d3 !important;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav.navbar .nav-link:hover {
+  color: rgb(0, 92, 145) !important; /* White color on hover */
+}
+
+  
+  .nav-link, .nav-dropdown {
+    color: #d3d3d3 !important;
+  }
+  
+  /* .navbar-collapse {
+    justify-content: flex-end;
+  } */
+  nav.navbar .dropdown-item {
+    color: #000000 !important; /* Light text color */
+    font-size: 1rem; /* Font size for dropdown items */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  nav.navbar .dropdown-item:hover {
+    color: #ffffff !important; /* White text on hover */
+    background-color: #000000 !important; /* Blue background on hover */
+  }
+  
+  /* Style for the dropdown menu container */
+  nav.navbar .dropdown-menu {
+    background-color: rgb(255, 255, 255); /* Black background for dropdown menu */
+    border: none; /* Remove border */
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    nav.navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      
+    }
+    nav.navbar .container {
+      max-width: 100%; /* Allow full-width to prevent constraint */
+      padding: 0 15px; /* Adjust side padding as needed */
+      
+    }
+    nav.navbar .navbar-collapse {
+      background-color: rgb(255, 255, 255); /* Black background for the entire toggler menu */
+      max-width: 250px; /* Set a specific width for the expanded menu */
+      margin: 0 auto; /* Center the menu horizontally */
+      border-radius: 8px; /* Optional: Add rounded corners */
+      padding: 1rem;
+      border-color: #000000;
+    }
+  
+    
+    nav.navbar .container .navbar-brand {
+      font-size: 1rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    nav.navbar .container .navbar-toggler {
+      padding: 0.5rem;
+      margin-top: auto;
+      margin-bottom: auto;
+      
+      
+    }
+    
+    nav.navbar .nav-link {
+      font-size: 1rem;
+      color: #000000 !important;
+    }
+    nav.navbar .nav-link {
+      font-size: 1rem;
+      color: #000000 !important;
+    }
+    
+  
+    nav.navbar .nav-item {
+      margin: 0.5rem 0;
+    }
+    
+    
+    nav.navbar .dropdown-menu {
+      background-color: rgb(0, 0, 0);
+    }
+  
+   
+    nav.navbar .dropdown-item {
+      font-size: 0.95rem;
+      padding: 0.4rem 0.8rem;
+      color: #d3d3d3 !important;
+    }
+  
+    
+  }
+  
+  
+  .banner {
+    margin-top: 0;
+    padding: 260px 0 100px 0;
+    background-color: #000; /* Black background */
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .banner h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .banner p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+    margin: 0 auto;
+  }
+  
+  .banner button {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 60px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .banner button svg {
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    line-height: 1;
+  }
+  
+  .banner button:hover svg {
+    margin-left: 25px;
+  }
+  
+  .banner img {
+    animation: updown 3s linear infinite;
+  }
+  
+  /* Animation for floating image */
+  @keyframes updown {
+    0% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+ /* About Page Parent Class */
+.about-page .custom-about-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0 15px; /* Add padding for smaller screens */
+}
+
+.about-page .custom-about-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.about-page .custom-about-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about-page .custom-about-row-reverse {
+  flex-direction: row-reverse; /* Reverse image and text alignment */
+}
+
+.about-page .custom-about-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.about-page .custom-about-text h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-page .custom-about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-page .custom-about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+  .about-page .custom-about-container {
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+
+  .about-page .custom-about-row {
+    flex-direction: column; /* Stack rows vertically */
+    text-align: center;
+  }
+
+  .about-page .custom-about-row-reverse {
+    flex-direction: column; /* Stack rows vertically */
+  }
+
+  .about-page .custom-about-text h2 {
+    font-size: 1.6rem; /* Reduce heading size */
+  }
+
+  .about-page .custom-about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-page .custom-about-text p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  .about-page .custom-about-image img {
+    margin-bottom: 20px; /* Add spacing below images */
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 576px) {
+  .about-page .custom-about-title {
+    font-size: 2rem; /* Reduce title size */
+  }
+
+  .about-page .custom-about-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-page .custom-about-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-page .custom-about-text p {
+    font-size: 0.85rem;
+  }
+
+  .about-page .custom-about-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .about-page .custom-about-row {
+    margin-bottom: 1.5rem; /* Reduce spacing between rows */
+  }
+}
+
+
+/* Services Section */
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+/* Row and Column adjustments for layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Styling with Hover Effect */
+.card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none; /* Remove underline from link styling */
+  color: inherit; /* Inherit color for link */
+  padding-top: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Card Image Styling */
+.card .card-img-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  margin: 0 auto 1rem auto; /* Center the image */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover.card-img-top {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+  filter: brightness(1.2); /* Brighten image on hover */
+}
+
+/* Title Styling */
+.card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.card:hover .card-title {
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .container h2 {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+  
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Rationale", sans-serif;
+}
+
+.contact-section form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.contact-section .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-section .form-control {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .form-control:focus {
+  border-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section .btn-primary {
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+  background-color: #252525;
+  transform: translateY(-2px);
+}
+
+.contact-section .btn-primary:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add subtle hover effect for input fields */
+.contact-section .form-control:hover {
+  border-color: #000000;
+}
+
+/* Add spacing for better readability */
+.contact-section .form-label {
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-section form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-section form {
+    padding: 1.5rem;
+  }
+}
+/* General Footer Styling */
+.footer-container {
+  background-color: #000000; /* Dark background */
+  color: #f8f9fa; /* Light text for contrast */
+  padding: 20px 40px;
+}
+
+.footer-left, .footer-right {
+  margin: 10px 0;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+  color: #f8f9fa;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #17a2b8; /* Light blue hover effect */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Logos Section */
+.footer-logos {
+  margin-top: 20px;
+}
+
+.footer-logo {
+  max-width: 80px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-left, .footer-right {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+
+  .footer-logo {
+    max-width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-left p,
+  .footer-right p {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    max-width: 50px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+
+
+/* ITES Section Container */
+.ites-section .ites-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.ites-section .ites-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+/* Row and Column Adjustments for Layout */
+.ites-section .ites-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ites-section .ites-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling */
+.ites-section .ites-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  position: relative;
+  height: 250px; /* Consistent height */
+}
+
+/* Card Hover Styling */
+.ites-section .ites-card:hover {
+  background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.ites-section .ites-card:hover .ites-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
+}
+
+/* Icon Styling */
+.ites-section .ites-card .icon {
+  margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.ites-section .ites-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
+}
+
+/* Title Styling */
+.ites-section .ites-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.ites-section .ites-card:hover .ites-card-title {
+  color: #ffffff;
+}
+
+/* Description Styling */
+/* Smaller Description Fonts */
+.ites-section .ites-card-description {
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ites-section .ites-card:hover .ites-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.ites-section .ites-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .ites-section .ites-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .ites-section .ites-container h2 {
+    font-size: 2rem;
+  }
+
+  .ites-section .ites-card-title {
+    font-size: 1.15rem;
+  }
+
+  .ites-section .ites-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .ites-section .ites-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ites-section .ites-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .ites-section .ites-card-title {
+    font-size: 1.1rem;
+  }
+
+  .ites-section .ites-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .ites-section .ites-container {
+    padding: 1rem;
+  }
+
+  .ites-section .ites-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .ites-section .ites-card {
+    height: 180px; /* Adjust for smaller screens */
+    padding: 1rem;
+  }
+
+  .ites-section .ites-card-title {
+    font-size: 1rem;
+  }
+
+  .ites-section .ites-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
+}
+
+
+
+ 
+
+/* BPO Section Container */
+.bpo-section .bpo-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.bpo-section .bpo-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column Adjustments for Layout */
+.bpo-section .bpo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bpo-section .bpo-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling */
+.bpo-section .bpo-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  position: relative;
+  height: 250px; /* Consistent height */
+}
+
+/* Card Hover Styling */
+.bpo-section .bpo-card:hover {
+  background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.bpo-section .bpo-card:hover .bpo-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
+}
+
+/* Icon Styling */
+.bpo-section .bpo-card .icon {
+  margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.bpo-section .bpo-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
+}
+
+/* Title Styling */
+.bpo-section .bpo-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.bpo-section .bpo-card:hover .bpo-card-title {
+  color: #ffffff;
+}
+
+/* Description Styling */
+/* Smaller Description Fonts */
+.bpo-section .bpo-card-description {
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bpo-section .bpo-card:hover .bpo-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.bpo-section .bpo-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .bpo-section .bpo-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .bpo-section .bpo-container h2 {
+    font-size: 2rem;
+  }
+
+  .bpo-section .bpo-card-title {
+    font-size: 1.15rem;
+  }
+
+  .bpo-section .bpo-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .bpo-section .bpo-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bpo-section .bpo-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .bpo-section .bpo-card-title {
+    font-size: 1.1rem;
+  }
+
+  .bpo-section .bpo-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .bpo-section .bpo-container {
+    padding: 1rem;
+  }
+
+  .bpo-section .bpo-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .bpo-section .bpo-card {
+    height: 180px; /* Adjust for smaller screens */
+    padding: 1rem;
+  }
+
+  .bpo-section .bpo-card-title {
+    font-size: 1rem;
+  }
+
+  .bpo-section .bpo-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
+}
+/* OUTS Section Container */
+.outs-section .outs-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.outs-section .outs-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column Adjustments for Layout */
+.outs-section .outs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.outs-section .outs-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling */
+.outs-section .outs-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  position: relative;
+  height: 250px; /* Consistent height */
+}
+
+/* Card Hover Styling */
+.outs-section .outs-card:hover {
+  background-color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.outs-section .outs-card .icon {
+  margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.outs-section .outs-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
+}
+
+/* Title Styling */
+.outs-section .outs-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.outs-section .outs-card:hover .outs-card-title {
+  color: #ffffff;
+}
+
+/* Description Styling */
+/* Smaller Description Fonts */
+.outs-section .outs-card-description {
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.outs-section .outs-card:hover .outs-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.outs-section .outs-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
+/* Responsive Styling */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+  .outs-section .outs-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .outs-section .outs-container h2 {
+    font-size: 2rem;
+  }
+
+  .outs-section .outs-card-title {
+    font-size: 1.15rem;
+  }
+
+  .outs-section .outs-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 768px) {
+  .outs-section .outs-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .outs-section .outs-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .outs-section .outs-card-title {
+    font-size: 1.1rem;
+  }
+
+  .outs-section .outs-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .outs-section .outs-container {
+    padding: 1rem;
+  }
+
+  .outs-section .outs-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .outs-section .outs-card {
+    height: 180px; /* Adjust for smaller screens */
+    padding: 1rem;
+  }
+
+  .outs-section .outs-card-title {
+    font-size: 1rem;
+  }
+
+  .outs-section .outs-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
+}
+
+
+/* Tech Section Container */
+.tech-section .tech-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.tech-section .tech-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column Adjustments for Layout */
+.tech-section .tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-section .tech-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling */
+.tech-section .tech-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  position: relative;
+  height: 250px; /* Consistent height */
+}
+
+/* Card Hover Styling */
+.tech-section .tech-card:hover {
+  background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.tech-section .tech-card:hover .tech-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
+}
+
+/* Icon Styling */
+.tech-section .tech-card .icon {
+  margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.tech-section .tech-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
+}
+
+/* Title Styling */
+.tech-section .tech-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.tech-section .tech-card:hover .tech-card-title {
+  color: #ffffff;
+}
+
+/* Description Styling */
+/* Smaller Description Fonts */
+.tech-section .tech-card-description {
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tech-section .tech-card:hover .tech-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.tech-section .tech-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .tech-section .tech-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .tech-section .tech-container h2 {
+    font-size: 2rem;
+  }
+
+  .tech-section .tech-card-title {
+    font-size: 1.15rem;
+  }
+
+  .tech-section .tech-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-section .tech-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .tech-section .tech-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .tech-section .tech-card-title {
+    font-size: 1.1rem;
+  }
+
+  .tech-section .tech-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-section .tech-container {
+    padding: 1rem;
+  }
+
+  .tech-section .tech-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .tech-section .tech-card {
+    height: 180px; /* Adjust for smaller screens */
+    padding: 1rem;
+  }
+
+  .tech-section .tech-card-title {
+    font-size: 1rem;
+  }
+
+  .tech-section .tech-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
+}
+
+
+/* PRM Section */
+.prm-section .prm-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.prm-section .prm-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column Adjustments for Layout */
+.prm-section .prm-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prm-section .prm-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling */
+.prm-section .prm-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  position: relative;
+  height: 250px; /* Consistent height */
+}
+
+/* Card Hover Styling */
+.prm-section .prm-card:hover {
+  background-color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Reduce Contents on Hover */
+.prm-section .prm-card:hover .prm-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
+}
+
+/* Icon Styling */
+.prm-section .prm-card .icon {
+  margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.prm-section .prm-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
+}
+
+/* Title Styling */
+.prm-section .prm-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.prm-section .prm-card:hover .prm-card-title {
+  color: #ffffff;
+}
+
+/* Description Styling */
+.prm-section .prm-card-description {
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.prm-section .prm-card:hover .prm-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.prm-section .prm-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
+/* Responsive Styling */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+  .prm-section .prm-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .prm-section .prm-container h2 {
+    font-size: 2rem;
+  }
+
+  .prm-section .prm-card-title {
+    font-size: 1.15rem;
+  }
+
+  .prm-section .prm-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 768px) {
+  .prm-section .prm-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .prm-section .prm-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .prm-section .prm-card-title {
+    font-size: 1.1rem;
+  }
+
+  .prm-section .prm-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .prm-section .prm-container {
+    padding: 1rem;
+  }
+
+  .prm-section .prm-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .prm-section .prm-card {
+    height: 180px; /* Adjust for smaller screens */
+    padding: 1rem;
+  }
+
+  .prm-section .prm-card-title {
+    font-size: 1rem;
+  }
+
+  .prm-section .prm-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
+}
+
+
+/* Parent container for certificate section */
+.custom-certificate-container {
+  padding: 1rem 0; /* Top and bottom padding */
+  background-color: #ffffff; /* White background */
+  text-align: center;
+  border-radius: 0.2rem;
+  width: 100%; /* Ensure full width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Card styling */
+.custom-certificate-container .certificate-card {
+  border: none; /* Remove default border */
+  border-radius: 2px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #ffffff; /* White card background */
+  padding: 1rem; /* Add padding around the content */
+}
+
+.custom-certificate-container .certificate-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  background-color: #ececec; /* Slightly darker background on hover */
+}
+
+/* Image styling */
+.custom-certificate-container .certificate-img {
+  height: 100px; /* Larger height */
+  width: auto; /* Adjust width to keep aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+  object-fit: contain; /* Ensure the image is fully visible within the area */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Ensure the image is centered */
+}
+
+/* Card content styling */
+.custom-certificate-container .certificate-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.custom-certificate-container .certificate-info .card-title {
+  font-size: 1.5rem; /* Font size for titles */
+  font-weight: bold; /* Bold titles */
+  color: #333333; /* Dark grey for text */
+  font-family: "Rationale", sans-serif; /* Custom font */
+  margin: 0.5rem 0;
+  transition: color 0.3s ease; /* Smooth hover effect for color */
+}
+
+.custom-certificate-container .certificate-info .card-title:hover {
+  color: #007bff; /* Change to Bootstrap blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .custom-certificate-container {
+    padding: 1rem;
+  }
+
+  .custom-certificate-container .certificate-card {
+    margin-bottom: 1.5rem; /* Add spacing between cards */
+  }
+
+  .custom-certificate-container .certificate-info .card-title {
+    font-size: 1.25rem; /* Smaller font size on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-certificate-container .certificate-img {
+    height: 80px; /* Adjust image height for smaller screens */
+  }
+
+  .custom-certificate-container .certificate-info .card-title {
+    font-size: 1.1rem; /* Adjust title size for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-certificate-container {
+    padding: 0.5rem;
+  }
+
+  .custom-certificate-container .certificate-img {
+    height: 70px; /* Smaller image height for very small screens */
+  }
+
+  .custom-certificate-container .certificate-info .card-title {
+    font-size: 1rem; /* Smaller font size for extra small screens */
+  }
+}
