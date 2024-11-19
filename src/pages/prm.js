@@ -158,7 +158,18 @@ function PRM() {
             </Col>
           ))}
         </Row>
-      </Container>
+      </Container>  <div>
+          {services.map((service, index) => (
+            <div key={index} className="service-detail my-4">
+              <h3>{service.title}</h3>
+              <ul>
+                {service.description.map((desc, i) => (
+                  <li key={i}>{desc}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       <Certificate />
       <Contact />
     </div>
