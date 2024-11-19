@@ -776,16 +776,51 @@ nav.navbar .nav-link:hover {
     max-width: 50%;
   }
 
+  .ites-section .ites-container {
+    padding: 1.5rem;
+  }
+
   .ites-section .ites-container h2 {
     font-size: 2rem;
   }
 
-  .ites-section .ites-card-title {
-    font-size: 1.15rem;
+  .ites-section .ites-card {
+    height: auto; /* Let height adjust dynamically */
+    padding: 1.5rem; /* Maintain some padding */
+    transition: height 0.3s ease;
+  }
+
+  .ites-section .ites-card .ites-card-title {
+    font-size: 1.15rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .ites-section .ites-card:hover .ites-card-title {
+    font-size: 1rem;
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+
+  .ites-section .ites-card .icon {
+    font-size: 2.5rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .ites-section .ites-card:hover .icon {
+    font-size: 2rem; /* Reduce size on hover */
+    transform: translateY(-10px); /* Slight lift effect */
   }
 
   .ites-section .ites-card-description {
-    font-size: 0.65rem; /* Even smaller font for medium screens */
+    font-size: 0.65rem; /* Adjust description font size */
+    opacity: 0;
+    max-height: 0; /* Hide description initially */
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .ites-section .ites-card:hover .ites-card-description {
+    opacity: 1;
+    max-height: 300px; /* Expand to show full description */
   }
 }
 
@@ -795,16 +830,40 @@ nav.navbar .nav-link:hover {
     max-width: 100%;
   }
 
+  .ites-section .ites-container {
+    padding: 1.5rem;
+  }
+
   .ites-section .ites-container h2 {
     font-size: 1.75rem;
+  }
+
+  .ites-section .ites-card {
+    height: auto;
+    padding: 1.2rem;
   }
 
   .ites-section .ites-card-title {
     font-size: 1.1rem;
   }
 
+  .ites-section .ites-card .icon {
+    font-size: 2rem; /* Further reduce icon size */
+  }
+
+  .ites-section .ites-card:hover .icon {
+    font-size: 1.5rem; /* Shrink more on hover */
+  }
+
   .ites-section .ites-card-description {
-    font-size: 0.6rem; /* Smaller font for smaller screens */
+    font-size: 0.6rem;
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .ites-section .ites-card:hover .ites-card-description {
+    opacity: 1;
+    max-height: 250px; /* Enough space for full description */
   }
 }
 
@@ -818,7 +877,7 @@ nav.navbar .nav-link:hover {
   }
 
   .ites-section .ites-card {
-    height: 180px; /* Adjust for smaller screens */
+    height: auto; /* Fully dynamic height */
     padding: 1rem;
   }
 
@@ -826,11 +885,25 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 
+  .ites-section .ites-card .icon {
+    font-size: 1.75rem; /* Smaller icon size */
+  }
+
+  .ites-section .ites-card:hover .icon {
+    font-size: 1.25rem; /* Shrink more on hover */
+  }
+
   .ites-section .ites-card-description {
     font-size: 0.55rem; /* Smallest font for very small screens */
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .ites-section .ites-card:hover .ites-card-description {
+    opacity: 1;
+    max-height: 200px; /* Enough space for full description */
   }
 }
-
 
 
  
@@ -940,16 +1013,51 @@ nav.navbar .nav-link:hover {
     max-width: 50%;
   }
 
+  .bpo-section .bpo-container {
+    padding: 1.5rem;
+  }
+
   .bpo-section .bpo-container h2 {
     font-size: 2rem;
   }
 
-  .bpo-section .bpo-card-title {
-    font-size: 1.15rem;
+  .bpo-section .bpo-card {
+    height: auto; /* Let height adjust dynamically */
+    padding: 1.5rem; /* Maintain some padding */
+    transition: height 0.3s ease;
+  }
+
+  .bpo-section .bpo-card .bpo-card-title {
+    font-size: 1.15rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .bpo-section .bpo-card:hover .bpo-card-title {
+    font-size: 1rem;
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+
+  .bpo-section .bpo-card .icon {
+    font-size: 2.5rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .bpo-section .bpo-card:hover .icon {
+    font-size: 2rem; /* Reduce size on hover */
+    transform: translateY(-10px); /* Slight lift effect */
   }
 
   .bpo-section .bpo-card-description {
-    font-size: 0.65rem; /* Even smaller font for medium screens */
+    font-size: 0.65rem; /* Adjust description font size */
+    opacity: 0;
+    max-height: 0; /* Hide description initially */
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .bpo-section .bpo-card:hover .bpo-card-description {
+    opacity: 1;
+    max-height: 300px; /* Expand to show full description */
   }
 }
 
@@ -959,16 +1067,40 @@ nav.navbar .nav-link:hover {
     max-width: 100%;
   }
 
+  .bpo-section .bpo-container {
+    padding: 1.5rem;
+  }
+
   .bpo-section .bpo-container h2 {
     font-size: 1.75rem;
+  }
+
+  .bpo-section .bpo-card {
+    height: auto;
+    padding: 1.2rem;
   }
 
   .bpo-section .bpo-card-title {
     font-size: 1.1rem;
   }
 
+  .bpo-section .bpo-card .icon {
+    font-size: 2rem; /* Further reduce icon size */
+  }
+
+  .bpo-section .bpo-card:hover .icon {
+    font-size: 1.5rem; /* Shrink more on hover */
+  }
+
   .bpo-section .bpo-card-description {
-    font-size: 0.6rem; /* Smaller font for smaller screens */
+    font-size: 0.6rem;
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .bpo-section .bpo-card:hover .bpo-card-description {
+    opacity: 1;
+    max-height: 250px; /* Enough space for full description */
   }
 }
 
@@ -982,7 +1114,7 @@ nav.navbar .nav-link:hover {
   }
 
   .bpo-section .bpo-card {
-    height: 180px; /* Adjust for smaller screens */
+    height: auto; /* Fully dynamic height */
     padding: 1rem;
   }
 
@@ -990,10 +1122,27 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 
+  .bpo-section .bpo-card .icon {
+    font-size: 1.75rem; /* Smaller icon size */
+  }
+
+  .bpo-section .bpo-card:hover .icon {
+    font-size: 1.25rem; /* Shrink more on hover */
+  }
+
   .bpo-section .bpo-card-description {
     font-size: 0.55rem; /* Smallest font for very small screens */
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .bpo-section .bpo-card:hover .bpo-card-description {
+    opacity: 1;
+    max-height: 200px; /* Enough space for full description */
   }
 }
+
+
 /* OUTS Section Container */
 .outs-section .outs-container {
   padding: 2rem;
@@ -1090,47 +1239,104 @@ nav.navbar .nav-link:hover {
 
 /* Responsive Styling */
 
-/* Medium Devices (Tablets) */
+/* Responsive Styling */
 @media (max-width: 992px) {
   .outs-section .outs-col {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
+  .outs-section .outs-container {
+    padding: 1.5rem;
+  }
+
   .outs-section .outs-container h2 {
     font-size: 2rem;
   }
 
-  .outs-section .outs-card-title {
-    font-size: 1.15rem;
+  .outs-section .outs-card {
+    height: auto; /* Let height adjust dynamically */
+    padding: 1.5rem; /* Maintain some padding */
+    transition: height 0.3s ease;
+  }
+
+  .outs-section .outs-card .outs-card-title {
+    font-size: 1.15rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .outs-section .outs-card:hover .outs-card-title {
+    font-size: 1rem;
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+
+  .outs-section .outs-card .icon {
+    font-size: 2.5rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .outs-section .outs-card:hover .icon {
+    font-size: 2rem; /* Reduce size on hover */
+    transform: translateY(-10px); /* Slight lift effect */
   }
 
   .outs-section .outs-card-description {
-    font-size: 0.65rem; /* Even smaller font for medium screens */
+    font-size: 0.65rem; /* Adjust description font size */
+    opacity: 0;
+    max-height: 0; /* Hide description initially */
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .outs-section .outs-card:hover .outs-card-description {
+    opacity: 1;
+    max-height: 300px; /* Expand to show full description */
   }
 }
 
-/* Small Devices (Mobile Phones) */
 @media (max-width: 768px) {
   .outs-section .outs-col {
     flex: 0 0 100%;
     max-width: 100%;
   }
 
+  .outs-section .outs-container {
+    padding: 1.5rem;
+  }
+
   .outs-section .outs-container h2 {
     font-size: 1.75rem;
+  }
+
+  .outs-section .outs-card {
+    height: auto;
+    padding: 1.2rem;
   }
 
   .outs-section .outs-card-title {
     font-size: 1.1rem;
   }
 
+  .outs-section .outs-card .icon {
+    font-size: 2rem; /* Further reduce icon size */
+  }
+
+  .outs-section .outs-card:hover .icon {
+    font-size: 1.5rem; /* Shrink more on hover */
+  }
+
   .outs-section .outs-card-description {
-    font-size: 0.6rem; /* Smaller font for smaller screens */
+    font-size: 0.6rem;
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .outs-section .outs-card:hover .outs-card-description {
+    opacity: 1;
+    max-height: 250px; /* Enough space for full description */
   }
 }
 
-/* Extra Small Devices */
 @media (max-width: 576px) {
   .outs-section .outs-container {
     padding: 1rem;
@@ -1141,7 +1347,7 @@ nav.navbar .nav-link:hover {
   }
 
   .outs-section .outs-card {
-    height: 180px; /* Adjust for smaller screens */
+    height: auto; /* Fully dynamic height */
     padding: 1rem;
   }
 
@@ -1149,8 +1355,23 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 
+  .outs-section .outs-card .icon {
+    font-size: 1.75rem; /* Smaller icon size */
+  }
+
+  .outs-section .outs-card:hover .icon {
+    font-size: 1.25rem; /* Shrink more on hover */
+  }
+
   .outs-section .outs-card-description {
     font-size: 0.55rem; /* Smallest font for very small screens */
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .outs-section .outs-card:hover .outs-card-description {
+    opacity: 1;
+    max-height: 200px; /* Enough space for full description */
   }
 }
 
@@ -1260,16 +1481,51 @@ nav.navbar .nav-link:hover {
     max-width: 50%;
   }
 
+  .tech-section .tech-container {
+    padding: 1.5rem;
+  }
+
   .tech-section .tech-container h2 {
     font-size: 2rem;
   }
 
-  .tech-section .tech-card-title {
-    font-size: 1.15rem;
+  .tech-section .tech-card {
+    height: auto; /* Let height adjust dynamically */
+    padding: 1.5rem; /* Maintain some padding */
+    transition: height 0.3s ease;
+  }
+
+  .tech-section .tech-card .tech-card-title {
+    font-size: 1.15rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .tech-section .tech-card:hover .tech-card-title {
+    font-size: 1rem;
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+
+  .tech-section .tech-card .icon {
+    font-size: 2.5rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .tech-section .tech-card:hover .icon {
+    font-size: 2rem; /* Reduce size on hover */
+    transform: translateY(-10px); /* Slight lift effect */
   }
 
   .tech-section .tech-card-description {
-    font-size: 0.65rem; /* Even smaller font for medium screens */
+    font-size: 0.65rem; /* Adjust description font size */
+    opacity: 0;
+    max-height: 0; /* Hide description initially */
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .tech-section .tech-card:hover .tech-card-description {
+    opacity: 1;
+    max-height: 300px; /* Expand to show full description */
   }
 }
 
@@ -1279,16 +1535,40 @@ nav.navbar .nav-link:hover {
     max-width: 100%;
   }
 
+  .tech-section .tech-container {
+    padding: 1.5rem;
+  }
+
   .tech-section .tech-container h2 {
     font-size: 1.75rem;
+  }
+
+  .tech-section .tech-card {
+    height: auto;
+    padding: 1.2rem;
   }
 
   .tech-section .tech-card-title {
     font-size: 1.1rem;
   }
 
+  .tech-section .tech-card .icon {
+    font-size: 2rem; /* Further reduce icon size */
+  }
+
+  .tech-section .tech-card:hover .icon {
+    font-size: 1.5rem; /* Shrink more on hover */
+  }
+
   .tech-section .tech-card-description {
-    font-size: 0.6rem; /* Smaller font for smaller screens */
+    font-size: 0.6rem;
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .tech-section .tech-card:hover .tech-card-description {
+    opacity: 1;
+    max-height: 250px; /* Enough space for full description */
   }
 }
 
@@ -1302,7 +1582,7 @@ nav.navbar .nav-link:hover {
   }
 
   .tech-section .tech-card {
-    height: 180px; /* Adjust for smaller screens */
+    height: auto; /* Fully dynamic height */
     padding: 1rem;
   }
 
@@ -1310,8 +1590,23 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 
+  .tech-section .tech-card .icon {
+    font-size: 1.75rem; /* Smaller icon size */
+  }
+
+  .tech-section .tech-card:hover .icon {
+    font-size: 1.25rem; /* Shrink more on hover */
+  }
+
   .tech-section .tech-card-description {
     font-size: 0.55rem; /* Smallest font for very small screens */
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .tech-section .tech-card:hover .tech-card-description {
+    opacity: 1;
+    max-height: 200px; /* Enough space for full description */
   }
 }
 
@@ -1417,47 +1712,104 @@ nav.navbar .nav-link:hover {
 
 /* Responsive Styling */
 
-/* Medium Devices (Tablets) */
+/* Responsive Styling */
 @media (max-width: 992px) {
   .prm-section .prm-col {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
+  .prm-section .prm-container {
+    padding: 1.5rem;
+  }
+
   .prm-section .prm-container h2 {
     font-size: 2rem;
   }
 
-  .prm-section .prm-card-title {
-    font-size: 1.15rem;
+  .prm-section .prm-card {
+    height: auto; /* Let height adjust dynamically */
+    padding: 1.5rem; /* Maintain some padding */
+    transition: height 0.3s ease;
+  }
+
+  .prm-section .prm-card .prm-card-title {
+    font-size: 1.15rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .prm-section .prm-card:hover .prm-card-title {
+    font-size: 1rem;
+    transform: translateY(-5px); /* Slight lift effect */
+  }
+
+  .prm-section .prm-card .icon {
+    font-size: 2.5rem !important;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+
+  .prm-section .prm-card:hover .icon {
+    font-size: 2rem; /* Reduce size on hover */
+    transform: translateY(-10px); /* Slight lift effect */
   }
 
   .prm-section .prm-card-description {
-    font-size: 0.65rem; /* Even smaller font for medium screens */
+    font-size: 0.65rem; /* Adjust description font size */
+    opacity: 0;
+    max-height: 0; /* Hide description initially */
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .prm-section .prm-card:hover .prm-card-description {
+    opacity: 1;
+    max-height: 300px; /* Expand to show full description */
   }
 }
 
-/* Small Devices (Mobile Phones) */
 @media (max-width: 768px) {
   .prm-section .prm-col {
     flex: 0 0 100%;
     max-width: 100%;
   }
 
+  .prm-section .prm-container {
+    padding: 1.5rem;
+  }
+
   .prm-section .prm-container h2 {
     font-size: 1.75rem;
+  }
+
+  .prm-section .prm-card {
+    height: auto;
+    padding: 1.2rem;
   }
 
   .prm-section .prm-card-title {
     font-size: 1.1rem;
   }
 
+  .prm-section .prm-card .icon {
+    font-size: 2rem; /* Further reduce icon size */
+  }
+
+  .prm-section .prm-card:hover .icon {
+    font-size: 1.5rem; /* Shrink more on hover */
+  }
+
   .prm-section .prm-card-description {
-    font-size: 0.6rem; /* Smaller font for smaller screens */
+    font-size: 0.6rem;
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .prm-section .prm-card:hover .prm-card-description {
+    opacity: 1;
+    max-height: 250px; /* Enough space for full description */
   }
 }
 
-/* Extra Small Devices */
 @media (max-width: 576px) {
   .prm-section .prm-container {
     padding: 1rem;
@@ -1468,7 +1820,7 @@ nav.navbar .nav-link:hover {
   }
 
   .prm-section .prm-card {
-    height: 180px; /* Adjust for smaller screens */
+    height: auto; /* Fully dynamic height */
     padding: 1rem;
   }
 
@@ -1476,10 +1828,26 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 
+  .prm-section .prm-card .icon {
+    font-size: 1.75rem; /* Smaller icon size */
+  }
+
+  .prm-section .prm-card:hover .icon {
+    font-size: 1.25rem; /* Shrink more on hover */
+  }
+
   .prm-section .prm-card-description {
     font-size: 0.55rem; /* Smallest font for very small screens */
+    max-height: 0; /* Hide description initially */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+
+  .prm-section .prm-card:hover .prm-card-description {
+    opacity: 1;
+    max-height: 200px; /* Enough space for full description */
   }
 }
+
 
 
 /* Parent container for certificate section */
@@ -1574,4 +1942,34 @@ nav.navbar .nav-link:hover {
   .custom-certificate-container .certificate-info .card-title {
     font-size: 1rem; /* Smaller font size for extra small screens */
   }
+}
+
+.service-detail {
+  background-color: #f8f9fa; /* Light background color for the service detail */
+  border: 1px solid #dee2e6; /* Light border for separation */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 1.5rem; /* Padding inside the detail box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.service-detail:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.service-detail h3 {
+  font-size: 1.5rem; /* Font size for the title */
+  color: #343a40; /* Dark text color for the title */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.service-detail ul {
+  list-style-type: disc; /* Use disc bullets for the list */
+  padding-left: 20px; /* Indentation for the list */
+}
+
+.service-detail li {
+  font-size: 1rem; /* Font size for the list items */
+  color: #495057; /* Dark gray text color for the list items */
+  margin-bottom: 0.5rem; /* Space between list items */
 }
