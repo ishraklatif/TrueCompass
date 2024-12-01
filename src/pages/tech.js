@@ -10,90 +10,78 @@ import { TbCloudComputing } from "react-icons/tb";
 import { GiCyberEye } from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
 
-function TECH() {
-  // Rotating text array for the Banner component
-  const rotateTextArray = [
-    "Custom Software Development",
-    "Web Development",
-    "Mobile App Development",
-    "Cloud Computing & Infrastructure",
-    "Cybersecurity Solutions",
-    "IT Support & Maintenance",
-  ];
 
+function TECH() {
   const [hoveredTitle, setHoveredTitle] = useState("Tech Services");
 
-  // Define the services data
-  const services = [
-    {
-      title: "Custom Software Development",
-      icon: <SiPaloaltosoftware size={50} />,
-      hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />,
-      description: [
-        "Customized Solutions",
-        "End-to-End Development",
-        "Software Architecture",
-      ],
-    },
-    {
-      title: "Web Development",
-      icon: <CgWebsite size={50} />,
-      hoverIcon: <CgWebsite size={70} color="#ffffff" />,
-      description: [
-        "Responsive Website Design",
-        "E-commerce Solutions",
-        "Web Application Development",
-      ],
-    },
-    {
-      title: "Mobile App Development",
-      icon: <FaAppStoreIos size={50} />,
-      hoverIcon: <FaAppStoreIos size={70} color="#ffffff" />,
-      description: [
-        "iOS & Android Development",
-        "Cross-Platform Solutions",
-        "App Maintenance & Support",
-      ],
-    },
-    {
-      title: "Cloud Computing & Infrastructure",
-      icon: <TbCloudComputing size={50} />,
-      hoverIcon: <TbCloudComputing size={70} color="#ffffff" />,
-      description: [
-        "Cloud Migration",
-        "Cloud Management",
-        "Infrastructure as a Service (IaaS)",
-      ],
-    },
-    {
-      title: "Cybersecurity Solutions",
-      icon: <GiCyberEye size={50} />,
-      hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
-      description: [
-        "Threat Detection",
-        "Vulnerability Management",
-        "Incident Response",
-      ],
-    },
-    {
-      title: "IT Support & Maintenance",
-      icon: <GrHostMaintenance size={50} />,
-      hoverIcon: <GrHostMaintenance size={70} color="#ffffff" />,
-      description: [
-        "24/7 Technical Support",
-        "Network Security & Monitoring",
-        "System Troubleshooting",
-      ],
-    },
-  ];
+ // Define the services data
+ const services = [
+  {
+    title: "Custom Software Development",
+    icon: <SiPaloaltosoftware size={50} />,
+    hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />,
+    description: [
+      "Customized Solutions",
+      "End-to-End Development",
+      "Software Architecture",
+    ],
+  },
+  {
+    title: "Web Development",
+    icon: <CgWebsite size={50} />,
+    hoverIcon: <CgWebsite size={70} color="#ffffff" />,
+    description: [
+      "Responsive Website Design",
+      "E-commerce Solutions",
+      "Web Application Development",
+    ],
+  },
+  {
+    title: "Mobile App Development",
+    icon: <FaAppStoreIos size={50} />,
+    hoverIcon: <FaAppStoreIos size={70} color="#ffffff" />,
+    description: [
+      "iOS & Android Development",
+      "Cross-Platform Solutions",
+      "App Maintenance & Support",
+    ],
+  },
+  {
+    title: "Cloud Computing & Infrastructure",
+    icon: <TbCloudComputing size={50} />,
+    hoverIcon: <TbCloudComputing size={70} color="#ffffff" />,
+    description: [
+      "Cloud Migration",
+      "Cloud Management",
+      "Infrastructure as a Service (IaaS)",
+    ],
+  },
+  {
+    title: "Cybersecurity Solutions",
+    icon: <GiCyberEye size={50} />,
+    hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
+    description: [
+      "Threat Detection",
+      "Vulnerability Management",
+      "Incident Response",
+    ],
+  },
+  {
+    title: "IT Support & Maintenance",
+    icon: <GrHostMaintenance size={50} />,
+    hoverIcon: <GrHostMaintenance size={70} color="#ffffff" />,
+    description: [
+      "24/7 Technical Support",
+      "Network Security & Monitoring",
+      "System Troubleshooting",
+    ],
+  },
+];
 
   return (
     <div className="tech-section">
-      {/* Pass the rotating text array and fixed heading to Banner */}
-      <Banner
-        rotateTextArray={rotateTextArray}
-        fixedHeading="Tech Services"
-      />
+      {/* Pass the fixedHeading to Banner */}
+      <Banner fixedHeading="Tech Services" />
       <Container className="tech-container my-5">
         <h2>Our Tech Services</h2>
         <Row className="tech-row">
@@ -129,18 +117,7 @@ function TECH() {
             </Col>
           ))}
         </Row>
-      </Container>  <div>
-          {services.map((service, index) => (
-            <div key={index} className="service-detail my-4">
-              <h3>{service.title}</h3>
-              <ul>
-                {service.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      </Container>
       <Certificate />
       <Contact />
     </div>
@@ -148,3 +125,6 @@ function TECH() {
 }
 
 export default TECH;
+
+
+ 
