@@ -12,15 +12,6 @@ import Certificate from '../components/Certificate';
 function ITES() {
   const [hoveredTitle, setHoveredTitle] = useState("IT Enabled Services (ITES)");
 
-  const rotateTextArray = [
-    "Customer Support (Call Centers)",
-    "Data Entry & Processing",
-    "Payroll Management",
-    "Telemarketing",
-    "Finance & Accounting Services",
-    "HR Services",
-  ];
-
   const services = [
     {
       title: 'Customer Support (Call Centers)',
@@ -74,11 +65,7 @@ function ITES() {
 
   return (
     <div className="ites-section">
-      {/* Pass the rotateTextArray and fixedHeading to the Banner component */}
-      <Banner
-        rotateTextArray={rotateTextArray}
-        fixedHeading="IT Enabled Services (ITES)"
-      />
+      <Banner fixedHeading="IT Enabled Services (ITES)" />
       <Container className="ites-container my-5">
         <h2>ITES Services</h2>
         <Row className="ites-row">
@@ -112,18 +99,7 @@ function ITES() {
             </Col>
           ))}
         </Row>
-      </Container>  <div>
-          {services.map((service, index) => (
-            <div key={index} className="service-detail my-4">
-              <h3>{service.title}</h3>
-              <ul>
-                {service.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      </Container>
       <Certificate />
       <Contact />
     </div>
