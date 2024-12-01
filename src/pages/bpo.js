@@ -9,27 +9,12 @@ import { LuDatabaseBackup } from "react-icons/lu";
 import { BsTelephoneForward } from "react-icons/bs";
 import { FaUnity } from "react-icons/fa";
 import { MdContentPasteSearch, MdOutlineConnectingAirports } from "react-icons/md";
+
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 import Certificate from '../components/Certificate';
 
 function BPO() {
-  // Define the rotating text array for the Banner component
-  const rotateTextArray = [
-    "Data Entry & Management",
-    "Data Cleansing & Validation",
-    "Data Mining & Analysis",
-    "Document Digitization",
-    "Finance & Accounting",
-    "Back Office Support",
-    "Telemarketing & Lead Generation",
-    "IT & Technical Support",
-    "HR & Recruitment Process Outsourcing (RPO)",
-    "Content Moderating & Management",
-    "Supply Chain Management",
-    "Research & Analytics",
-  ];
-
   const [hoveredTitle, setHoveredTitle] = useState("BPO Services");
 
   // Define the services data
@@ -158,8 +143,8 @@ function BPO() {
 
   return (
     <div className="bpo-section">
-      {/* Pass the rotating text array and a fixed title to Banner */}
-      <Banner rotateTextArray={rotateTextArray} fixedHeading="BPO Services" />
+      {/* Pass the fixedHeading to Banner */}
+      <Banner fixedHeading="BPO Services" />
       <Container className="bpo-container my-5">
         <h2>Our BPO Services</h2>
         <Row className="bpo-row">
@@ -193,18 +178,7 @@ function BPO() {
             </Col>
           ))}
         </Row>
-      </Container>  <div>
-          {services.map((service, index) => (
-            <div key={index} className="service-detail my-4">
-              <h3>{service.title}</h3>
-              <ul>
-                {service.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      </Container>
       <Certificate />
       <Contact />
     </div>
@@ -212,3 +186,6 @@ function BPO() {
 }
 
 export default BPO;
+
+
+ 
