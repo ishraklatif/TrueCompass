@@ -10,87 +10,77 @@ import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import Certificate from "../components/Certificate";
 
-function OUTS() {
-  // Define the rotating text array for the Banner component
-  const rotateTextArray = [
-    "IT & Software Development",
-    "Customer Support",
-    "Administrative Services",
-    "IT Infrastructure Management",
-    "Cloud Computing Solutions",
-    "Cybersecurity Services",
-  ];
 
+function OUTS() {
   const [hoveredTitle, setHoveredTitle] = useState("Outsourcing Services");
 
-  // Services data
-  const services = [
-    {
-      title: "IT & Software Development",
-      icon: <MdOutlineEngineering size={50} />,
-      hoverIcon: <MdOutlineEngineering size={70} color="#ffffff" />,
-      description: [
-        "Custom Application Development",
-        "Software Design & Testing",
-        "System Integration",
-      ],
-    },
-    {
-      title: "Customer Support",
-      icon: <RiCustomerService2Line size={50} />,
-      hoverIcon: <RiCustomerService2Line size={70} color="#ffffff" />,
-      description: [
-        "24/7 Customer Assistance",
-        "Technical Support",
-        "Customer Query Resolution",
-      ],
-    },
-    {
-      title: "Administrative Services",
-      icon: <TbHierarchy3 size={50} />,
-      hoverIcon: <TbHierarchy3 size={70} color="#ffffff" />,
-      description: [
-        "Data Management",
-        "Operational Support",
-        "Executive Assistance",
-      ],
-    },
-    {
-      title: "IT Infrastructure Management",
-      icon: <FaUniversity size={50} />,
-      hoverIcon: <FaUniversity size={70} color="#ffffff" />,
-      description: [
-        "Network Monitoring",
-        "Server Administration",
-        "Database Management",
-      ],
-    },
-    {
-      title: "Cloud Computing Solutions",
-      icon: <GrCloudSoftware size={50} />,
-      hoverIcon: <GrCloudSoftware size={70} color="#ffffff" />,
-      description: [
-        "Cloud Migration Services",
-        "Infrastructure as a Service (IaaS)",
-        "Cloud Security Solutions",
-      ],
-    },
-    {
-      title: "Cybersecurity Services",
-      icon: <GiCyberEye size={50} />,
-      hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
-      description: [
-        "Risk Assessment",
-        "Threat Mitigation",
-        "Data Security Management",
-      ],
-    },
-  ];
-
+ // Services data
+ const services = [
+  {
+    title: "IT & Software Development",
+    icon: <MdOutlineEngineering size={50} />,
+    hoverIcon: <MdOutlineEngineering size={70} color="#ffffff" />,
+    description: [
+      "Custom Application Development",
+      "Software Design & Testing",
+      "System Integration",
+    ],
+  },
+  {
+    title: "Customer Support",
+    icon: <RiCustomerService2Line size={50} />,
+    hoverIcon: <RiCustomerService2Line size={70} color="#ffffff" />,
+    description: [
+      "24/7 Customer Assistance",
+      "Technical Support",
+      "Customer Query Resolution",
+    ],
+  },
+  {
+    title: "Administrative Services",
+    icon: <TbHierarchy3 size={50} />,
+    hoverIcon: <TbHierarchy3 size={70} color="#ffffff" />,
+    description: [
+      "Data Management",
+      "Operational Support",
+      "Executive Assistance",
+    ],
+  },
+  {
+    title: "IT Infrastructure Management",
+    icon: <FaUniversity size={50} />,
+    hoverIcon: <FaUniversity size={70} color="#ffffff" />,
+    description: [
+      "Network Monitoring",
+      "Server Administration",
+      "Database Management",
+    ],
+  },
+  {
+    title: "Cloud Computing Solutions",
+    icon: <GrCloudSoftware size={50} />,
+    hoverIcon: <GrCloudSoftware size={70} color="#ffffff" />,
+    description: [
+      "Cloud Migration Services",
+      "Infrastructure as a Service (IaaS)",
+      "Cloud Security Solutions",
+    ],
+  },
+  {
+    title: "Cybersecurity Services",
+    icon: <GiCyberEye size={50} />,
+    hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
+    description: [
+      "Risk Assessment",
+      "Threat Mitigation",
+      "Data Security Management",
+    ],
+  },
+];
   return (
     <div className="outs-section">
-      {/* Pass the rotating text array and fixed title to the Banner */}
-      <Banner rotateTextArray={rotateTextArray} fixedHeading="Outsourcing Services" />
+      {/* Pass the fixedHeading to Banner */}
+      <Banner fixedHeading="Outsourcing Services" />
       <Container className="outs-container my-5">
         <h2>Our Outsourcing Services</h2>
         <Row className="outs-row">
@@ -124,18 +114,7 @@ function OUTS() {
             </Col>
           ))}
         </Row>
-      </Container>  <div>
-          {services.map((service, index) => (
-            <div key={index} className="service-detail my-4">
-              <h3>{service.title}</h3>
-              <ul>
-                {service.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      </Container>
       <Certificate />
       <Contact />
     </div>
@@ -143,3 +122,8 @@ function OUTS() {
 }
 
 export default OUTS;
+
+
+  
+
+  
