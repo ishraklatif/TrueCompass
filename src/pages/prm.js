@@ -11,24 +11,12 @@ import { FaBookReader } from "react-icons/fa";
 import { MdOutlineContactEmergency } from "react-icons/md";
 import { SlEnvolopeLetter } from "react-icons/sl";
 
-function PRM() {
-  // Define the rotating text array for the Banner component
-  const rotateTextArray = [
-    "Brand Positioning & Messaging",
-    "Reputation Management",
-    "Crisis Communication",
-    "Branding Strategy",
-    "Social Media PR",
-    "Content Creation & Storytelling",
-    "Event PR & Promotions",
-    "Crisis Management & Communication",
-    "Internal Communication & Employee Engagement",
-  ];
 
+function PRM() {
   const [hoveredTitle, setHoveredTitle] = useState("PR Management Services");
 
-  // Define PRM services data
-  const services = [
+   // Define PRM services data
+   const services = [
     {
       title: "Brand Positioning & Messaging",
       icon: <TbBrandDiscord size={50} />,
@@ -123,8 +111,8 @@ function PRM() {
 
   return (
     <div className="prm-section">
-      {/* Pass the rotating text array and fixed title to Banner */}
-      <Banner rotateTextArray={rotateTextArray} fixedHeading="PR Management Services" />
+      {/* Pass the fixedHeading to Banner */}
+      <Banner fixedHeading="PR Management Services" />
       <Container className="prm-container my-5">
         <h2>Our PR Management Services</h2>
         <Row className="prm-row">
@@ -158,18 +146,7 @@ function PRM() {
             </Col>
           ))}
         </Row>
-      </Container>  <div>
-          {services.map((service, index) => (
-            <div key={index} className="service-detail my-4">
-              <h3>{service.title}</h3>
-              <ul>
-                {service.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      </Container>
       <Certificate />
       <Contact />
     </div>
@@ -177,3 +154,7 @@ function PRM() {
 }
 
 export default PRM;
+
+ 
+
+ 
