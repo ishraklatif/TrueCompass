@@ -235,6 +235,89 @@ nav.navbar .nav-link:hover {
   .banner img {
     animation: updown 3s linear infinite;
   }
+
+  .banner-subtext {
+    margin-top: 20px;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Rationale", sans-serif;
+  }
+  
+  .banner-subtext h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .banner-subtext h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .banner-subtext ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  .banner-subtext ul li {
+    margin-bottom: 5px;
+  }
+  .banner .banner-contact-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .banner .banner-contact-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .banner .banner-contact-btn:active {
+    transform: scale(0.98); /* Click effect */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .banner-subtext h1 {
+      font-size: 2rem;
+    }
+  
+    .banner-subtext h3 {
+      font-size: 1.2rem;
+    }
+  
+    .banner-subtext ul {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .banner-subtext h1 {
+      font-size: 1.8rem;
+    }
+  
+    .banner-subtext h3 {
+      font-size: 1rem;
+    }
+  
+    .banner-subtext ul {
+      font-size: 0.9rem;
+    }
+  }
+  
   
   /* Animation for floating image */
   @keyframes updown {
