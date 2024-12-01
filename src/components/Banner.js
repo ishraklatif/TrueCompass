@@ -1,30 +1,22 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Banner = React.memo(() => {
+export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
 
-  // Define the toRotate array with useMemo for performance optimization
-  const toRotate = useMemo(() => [
-    "IT Enabled Services (ITES)", 
-    "Outsourcing Services", 
-    "BPO Services", 
-    "Tech Services", 
-    "PR Management"
-  ], []);
-
   useEffect(() => {
-    if (!toRotate.length) return;
+    if (!rotateTextArray || !rotateTextArray.length) return;
 
     const tick = () => {
-      const i = loopNum % toRotate.length;
-      const fullText = toRotate[i];
+      const i = loopNum % rotateTextArray.length;
+      const fullText = rotateTextArray[i];
       const updatedText = isDeleting
         ? fullText.substring(0, text.length - 1)
         : fullText.substring(0, text.length + 1);
@@ -50,7 +42,7 @@ export const Banner = React.memo(() => {
     }, delta);
 
     return () => clearInterval(ticker);
-  }, [text, delta, isDeleting, loopNum, toRotate]);
+  }, [text, delta, isDeleting, loopNum, rotateTextArray]);
 
   return (
     <section className="banner" id="home">
@@ -59,19 +51,31 @@ export const Banner = React.memo(() => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={isVisible ? 'animate__animated animate__fadeIn' : ''}
-                >
+                <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
                   <h3>True Compass</h3>
                   <h1>
-                    <span
-                      className="txt-rotate"
-                      data-period="1000"
-                      data-rotate={JSON.stringify(toRotate)}
-                    >
-                      <span className="wrap">{text}</span>
-                    </span>
+                    {fixedHeading || (
+                      <span className="txt-rotate">
+                        <span className="wrap">{text}</span>
+                      </span>
+                    )}
                   </h1>
+                  {showSubtext && (
+                    <div className="banner-subtext">
+                      <h1>FIND YOUR SERVICES AND GET IN CONTACT</h1>
+                      <h3>Get your outsourcing services with best profile and skills</h3>
+                      <ul>
+                        <li>IT Enabled Services (ITES)</li>
+                        <li>BPO Services</li>
+                        <li>Outsourcing Services</li>
+                        <li>PR Management Services</li>
+                        <li>Tech Services</li>
+                      </ul>
+                    </div>
+                  )}
+                   <LinkContainer to="/contact">
+                    <button className="banner-contact-btn">Contact Us</button>
+                  </LinkContainer>
                 </div>
               )}
             </TrackVisibility>
