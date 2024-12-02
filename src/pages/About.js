@@ -8,7 +8,7 @@ function About() {
     {
       title: "True Compass",
       subtitle: "Empowering Enterprises with ITES Excellence",
-      content: `Helinix Limited provides enterprises with customized IT outsourcing services and comprehensive ITES solutions, ranging from sophisticated tech advances to flawless business process outsourcing (BPO) services. As a tech services provider, we offer the know-how and resources required for companies to prosper in the rapidly changing digital landscape, guaranteeing productivity and expansion while concentrating on the key elements that determine your success.`,
+      content: `True Compass Limited provides enterprises with customized IT outsourcing services and comprehensive ITES solutions, ranging from sophisticated tech advances to flawless business process outsourcing (BPO) services. As a tech services provider, we offer the know-how and resources required for companies to prosper in the rapidly changing digital landscape, guaranteeing productivity and expansion while concentrating on the key elements that determine your success.`,
       img: null,
     },
     {
@@ -20,7 +20,7 @@ function About() {
     {
       title: "Why Us?",
       subtitle: "We Reach Globally",
-      content: `For Helinix Limited, “Global Reach” refers to providing outsourcing and IT solutions all over the world while guaranteeing smooth service across regions. This enables companies to grow, gain access to worldwide knowledge, and prosper outside of their local markets.`,
+      content: `For True Compass Limited, “Global Reach” refers to providing outsourcing and IT solutions all over the world while guaranteeing smooth service across regions. This enables companies to grow, gain access to worldwide knowledge, and prosper outside of their local markets.`,
       img: headerImg2,
     },
   ];
