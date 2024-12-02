@@ -57,7 +57,7 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                       </span>
                     )}
                   </h1>
-                  <LinkContainer to="/services">
+                
                   {showSubtext && (
                     <div className="banner-subtext">
                       <h1>FIND YOUR SERVICES AND GET IN CONTACT</h1>
@@ -70,7 +70,7 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                         <li>Tech Services</li>
                       </ul>
                     </div>
-                  </LinkContainer>
+                  
                   )}
                   <LinkContainer to="/about">
                     <img
