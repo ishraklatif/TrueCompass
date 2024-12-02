@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import TrackVisibility from 'react-on-screen';
+import portfolioImage from '../assets/img/portfolio.jpg';
 
 export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
   const [loopNum, setLoopNum] = useState(0);
@@ -72,7 +73,13 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                       </ul>
                     </div>
                   )}
-                 
+                  <LinkContainer to="/about">
+                    <img
+                      src={portfolioImage}
+                      alt="Portfolio Highlights"
+                      className="portfolio-display"
+                    />
+                  </LinkContainer>
                   <LinkContainer to="/contact">
                     <button className="custom-contact-btn">Contact Us</button>
                   </LinkContainer>
