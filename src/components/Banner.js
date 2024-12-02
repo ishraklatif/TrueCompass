@@ -73,19 +73,24 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                       </ul>
                     </div>
                   )}
-                  <LinkContainer to="/about">
-                    <img
-                      src={portfolioImage}
-                      alt="Portfolio Highlights"
-                      className="portfolio-display"
-                    />
-                  </LinkContainer>
-                  <LinkContainer to="/contact">
+                   <LinkContainer to="/contact">
                     <button className="custom-contact-btn">Contact Us</button>
                   </LinkContainer>
+                  
                 </div>
               )}
             </TrackVisibility>
+          </Col>
+           {/* Right Content */}
+           <Col xs={12} md={5} className="d-flex justify-content-end">
+            <LinkContainer to="/about">
+              <img
+                src={portfolioImage}
+                alt="Portfolio Highlights"
+                className="portfolio-display"
+              />
+            </LinkContainer>
+           
           </Col>
         </Row>
       </Container>
