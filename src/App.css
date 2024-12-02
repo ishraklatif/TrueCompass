@@ -273,21 +273,23 @@ nav.navbar .nav-link:hover {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #ffffff;
-    background-color: #007bff; /* Bootstrap primary color */
+    color: #000000;
+    background-color: #ffffff; /* Bootstrap primary color */
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .banner .custom-contact-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #ffffff; /* Darker shade on hover */
     transform: scale(1.05); /* Slight zoom effect */
   }
   
   .banner .custom-contact-btn:active {
     transform: scale(0.98); /* Click effect */
   }
+ 
+
    /* Portfolio Display Styles */
   .banner .portfolio-display {
   margin-top: 20px;
