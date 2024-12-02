@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import TrackVisibility from 'react-on-screen';
 import portfolioImage from '../assets/img/portfolio.jpg';
+import bannerImage from '../assets/img/banner.jpeg'; // Import the banner image
 
 export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
   const [loopNum, setLoopNum] = useState(0);
@@ -45,7 +46,7 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
   }, [text, delta, isDeleting, loopNum, rotateTextArray]);
 
   return (
-    <section className="banner" id="home">
+    <section className="banner" id="home" style={{ backgroundImage: `url(${bannerImage})` }}> {/* Set background image */}
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -64,25 +65,34 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                     <div className="banner-subtext">
                       <h1>FIND YOUR SERVICES AND GET IN CONTACT</h1>
                       <h3>Get your outsourcing services with best profile and skills</h3>
-                      <ul>
-                        <li>IT Enabled Services (ITES)</li>
-                        <li>BPO Services</li>
-                        <li>Outsourcing Services</li>
-                        <li>PR Management Services</li>
-                        <li>Tech Services</li>
+                      <ul className="services-list">
+                        <LinkContainer to="/services/ites">
+                            <li>IT Enabled Services (ITES)</li>
+                        </LinkContainer>
+                        <LinkContainer to="/services/bpo">
+                            <li>BPO Services</li>
+                        </LinkContainer>
+                        <LinkContainer to="/services/outs">
+                            <li>Outsourcing Services</li>
+                        </LinkContainer>
+                        <LinkContainer to="/services/prm">
+                            <li>PR Management Services</li>
+                        </LinkContainer>
+                        <LinkContainer to="/services/tech">
+                            <li>Tech Services</li>
+                        </LinkContainer>
                       </ul>
                     </div>
                   )}
-                   <LinkContainer to="/contact">
+                  <LinkContainer to="/contact">
                     <button className="custom-contact-btn">Contact Us</button>
                   </LinkContainer>
-                  
                 </div>
               )}
             </TrackVisibility>
           </Col>
-           {/* Right Content */}
-           <Col xs={12} md={5} className="d-flex justify-content-end">
+          {/* Right Content */}
+          <Col xs={12} md={5} className="d-flex justify-content-end">
             <LinkContainer to="/about">
               <img
                 src={portfolioImage}
@@ -90,7 +100,6 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                 className="portfolio-display"
               />
             </LinkContainer>
-           
           </Col>
         </Row>
       </Container>
