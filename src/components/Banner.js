@@ -1,34 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import portfolioImage from '../assets/img/portfolio.jpg'; // Ensure the path is correct
 
+// Memoized Banner Component
 export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
+  const period = 2000;
+
+  // State Management for Rotating Text
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
 
+  // Memoized Computed Text
+  const computedText = useMemo(() => rotateTextArray[loopNum % rotateTextArray.length], [loopNum, rotateTextArray]);
+
+  // Optimized useEffect for Rotating Text
   useEffect(() => {
-    if (!rotateTextArray || !rotateTextArray.length) return;
-
     const tick = () => {
-      const i = loopNum % rotateTextArray.length;
-      const fullText = rotateTextArray[i];
       const updatedText = isDeleting
-        ? fullText.substring(0, text.length - 1)
-        : fullText.substring(0, text.length + 1);
+        ? computedText.substring(0, text.length - 1)
+        : computedText.substring(0, text.length + 1);
 
       setText(updatedText);
 
-      if (isDeleting) {
-        setDelta((prevDelta) => prevDelta / 2);
-      }
-
-      if (!isDeleting && updatedText === fullText) {
+      if (!isDeleting && updatedText === computedText) {
         setIsDeleting(true);
         setDelta(period);
       } else if (isDeleting && updatedText === '') {
@@ -38,19 +36,17 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
       }
     };
 
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
-
+    const ticker = setInterval(tick, delta);
     return () => clearInterval(ticker);
-  }, [text, delta, isDeleting, loopNum, rotateTextArray]);
+  }, [text, isDeleting, computedText, delta]);
 
+  // Render Component
   return (
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
+            <TrackVisibility partialVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
                   <h3>True Compass</h3>
