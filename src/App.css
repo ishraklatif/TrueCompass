@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 .logo-text{
   
   nav.navbar .container a.navbar-brand .logo-text {
     color: #ffffff; /* White text color */
+    font-family: "Rationale", sans-serif;
     font-size: 24px; /* Adjust font size as needed */
     font-weight: 150; /* Bold text */
     letter-spacing: 0.8px;
@@ -267,6 +268,20 @@ nav.navbar .nav-link:hover {
   .banner-subtext ul li {
     margin-bottom: 5px;
   }
+  .banner .services-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.banner .services-list li {
+    padding: 10px; /* Add padding for better spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color */
+}
+
+.banner .services-list li:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    cursor: pointer; /* Change cursor to pointer */
+}
   .banner .custom-contact-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -300,11 +315,15 @@ nav.navbar .nav-link:hover {
   margin-left: auto;
   margin-right: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   transform: scale(1.05); /* Slight zoom effect */
 }
 
 .banner .portfolio-display:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transform: scale(1.05); /* Slight zoom effect */
+  cursor: pointer;
 }
 
 
