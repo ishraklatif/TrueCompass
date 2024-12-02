@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import 'animate.css';
+import { LinkContainer } from 'react-router-bootstrap';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
@@ -20,7 +20,25 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
       const updatedText = isDeleting
         ? fullText.substring(0, text.length - 1)
         : fullText.substring(0, text.length + 1);
-@@ -50,7 +42,7 @@
+
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta((prevDelta) => prevDelta / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(period);
+      } else if (isDeleting && updatedText === '') {
+        setIsDeleting(false);
+        setLoopNum((prevLoopNum) => prevLoopNum + 1);
+        setDelta(500);
+      }
+    };
+
+    const ticker = setInterval(() => {
+      tick();
     }, delta);
 
     return () => clearInterval(ticker);
@@ -28,7 +46,8 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
 
   return (
     <section className="banner" id="home">
-@@ -59,27 +51,39 @@
+      <Container>
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
@@ -54,8 +73,8 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                       </ul>
                     </div>
                   )}
-                   <LinkContainer to="/contact">
-                    <button className="banner-contact-btn">Contact Us</button>
+                  <LinkContainer to="/contact">
+                    <button className="custom-contact-btn">Contact Us</button>
                   </LinkContainer>
                 </div>
               )}
