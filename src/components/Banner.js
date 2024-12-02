@@ -79,7 +79,7 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                       src={portfolioImage}
                       alt="Portfolio Highlights"
                       className="portfolio-display"
-                    />
+                    /> </LinkContainer>
                   <LinkContainer to="/contact">
                     <button className="custom-contact-btn">Contact Us</button>
                   </LinkContainer>
