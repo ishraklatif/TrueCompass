@@ -267,7 +267,7 @@ nav.navbar .nav-link:hover {
   .banner-subtext ul li {
     margin-bottom: 5px;
   }
-  .banner .banner-contact-btn {
+  .banner .custom-contact-btn {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -280,30 +280,14 @@ nav.navbar .nav-link:hover {
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  .banner .banner-contact-btn:hover {
+  .banner .custom-contact-btn:hover {
     background-color: #0056b3; /* Darker shade on hover */
     transform: scale(1.05); /* Slight zoom effect */
   }
   
-  .banner .banner-contact-btn:active {
+  .banner .custom-contact-btn:active {
     transform: scale(0.98); /* Click effect */
   }
-  /* Portfolio Display Styles */
-  .banner .portfolio-display {
-  margin-top: 20px;
-  max-width: 100%;
-  width: 350px; /* Default width for desktops */
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.banner .portfolio-display:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
-}
 
   
   @media (max-width: 768px) {
@@ -317,9 +301,6 @@ nav.navbar .nav-link:hover {
   
     .banner-subtext ul {
       font-size: 1rem;
-    }
-    .portfolio-display {
-      width: 250px; /* Smaller image for tablets */
     }
   
   }
@@ -336,9 +317,7 @@ nav.navbar .nav-link:hover {
     .banner-subtext ul {
       font-size: 0.9rem;
     }
-    .portfolio-display {
-      width: 250px; /* Even smaller image for mobile */
-    }
+    
   }
   
   
