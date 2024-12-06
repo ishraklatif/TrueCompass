@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import TrackVisibility from 'react-on-screen';
-import portfolioImage from '../assets/img/portfolio.jpg';
-import bannerImage from '../assets/img/banner.jpeg'; // Import the banner image
+
+import bannerImage from '../assets/img/banner.jpg'; // Import the banner image
 
 export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
   const [loopNum, setLoopNum] = useState(0);
@@ -85,7 +85,7 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
                     </div>
                   )}
                   <LinkContainer to="/contact">
-                    <button className="custom-contact-btn">Contact Us</button>
+                    <button className="custom-contact-btn">Free Consultation</button>
                   </LinkContainer>
                 </div>
               )}
@@ -93,13 +93,7 @@ export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }
           </Col>
           {/* Right Content */}
           <Col xs={12} md={5} className="d-flex justify-content-end">
-            <LinkContainer to="/about">
-              <img
-                src={portfolioImage}
-                alt="Portfolio Highlights"
-                className="portfolio-display"
-              />
-            </LinkContainer>
+           
           </Col>
         </Row>
       </Container>
