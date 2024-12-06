@@ -715,23 +715,29 @@ nav.navbar .nav-link:hover {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: #292929;
+  background-color: #000000;
 }
 
 /* Card Image Styling */
+.card:hover .card-img-top {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+  filter: brightness(0) invert(1); /* Makes the image appear white */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
 .card .card-img-top {
   width: 50px;
   height: 50px;
   border-radius: 50%; /* Circular image */
   object-fit: cover;
   margin: 0 auto 1rem auto; /* Center the image */
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
 }
 
-.card:hover.card-img-top {
-  transform: scale(1.1); /* Slightly enlarge image on hover */
-  filter: brightness(1.2); /* Brighten image on hover */
+.card:hover .card-title {
+  color: #ffffff; /* Change title color on hover */
 }
+
 
 /* Title Styling */
 .card .card-title {
