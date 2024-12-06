@@ -715,7 +715,7 @@ nav.navbar .nav-link:hover {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: #55baf5;
+  background-color: #292929;
 }
 
 /* Card Image Styling */
