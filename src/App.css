@@ -185,7 +185,7 @@ nav.navbar .nav-link:hover {
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #000000;
     text-align: center;
     position: relative;
     min-height: 100vh;
@@ -201,7 +201,7 @@ nav.navbar .nav-link:hover {
   }
   
   .banner p {
-    color: #B8B8B8;
+    color: #000000;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -240,7 +240,7 @@ nav.navbar .nav-link:hover {
   .banner-subtext {
     margin-top: 20px;
     text-align: left;
-    color: #ffffff;
+    color: #000000;
     font-family: "Rationale", sans-serif;
   }
   
@@ -288,15 +288,15 @@ nav.navbar .nav-link:hover {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #000000;
-    background-color: #ffffff; /* Bootstrap primary color */
+    color: #ffffff;
+    background-color: #6b0000; /* Bootstrap primary color */
+    border-color: #000000 !important;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .banner .custom-contact-btn:hover {
-    background-color: #ffffff; /* Darker shade on hover */
     transform: scale(1.05); /* Slight zoom effect */
   }
   
@@ -395,11 +395,13 @@ nav.navbar .nav-link:hover {
 .about-page .custom-about-row {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Ensure proper spacing between columns */
   margin-bottom: 2rem;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.about-page .custom-about-row-reverse {
-  flex-direction: row-reverse; /* Reverse image and text alignment */
+.about-page .custom-about-text {
+  text-align: left;
 }
 
 .about-page .custom-about-text h2 {
@@ -419,13 +421,63 @@ nav.navbar .nav-link:hover {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
+  margin-bottom: 1rem;
+}
+
+.about-page .custom-about-image {
+  text-align: center; /* Center the image for smaller screens */
 }
 
 .about-page .custom-about-image img {
-  width: 100%;
+  width: 20%; /* Default image size for desktops */
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Rating Stars */
+.about-page .rating {
+  display: flex;
+  align-items: center;
+}
+
+.about-page .rating svg {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+.about-page .rating:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+/* Icon Features Section */
+.about-page .icon-features-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-page .icon-feature {
+  margin-bottom: 1rem;
+}
+.about-page .icon-feature:hover {
+  transform: translateY(-5px);
+}
+
+.about-page .icon-feature img.feature-icon {
+  width: 50px; /* Adjust size of icons */
+  height: 50px; /* Maintain a uniform size */
+  margin-bottom: 10px;
+}
+
+.about-page .icon-feature p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+
+
 
 /* Responsive Styling */
 
@@ -437,11 +489,11 @@ nav.navbar .nav-link:hover {
 
   .about-page .custom-about-row {
     flex-direction: column; /* Stack rows vertically */
-    text-align: center;
+    text-align: center; /* Center-align text for smaller devices */
   }
 
-  .about-page .custom-about-row-reverse {
-    flex-direction: column; /* Stack rows vertically */
+  .about-page .custom-about-text {
+    text-align: center; /* Center-align text */
   }
 
   .about-page .custom-about-text h2 {
@@ -457,7 +509,16 @@ nav.navbar .nav-link:hover {
   }
 
   .about-page .custom-about-image img {
+    width: 10%; /* Smaller images on tablets */
     margin-bottom: 20px; /* Add spacing below images */
+  }
+  .about-page .icon-feature img.feature-icon {
+    width: 40px; /* Smaller icons on tablets */
+    height: 40px;
+  }
+
+  .about-page .icon-feature p {
+    font-size: 0.9rem;
   }
 }
 
@@ -465,6 +526,10 @@ nav.navbar .nav-link:hover {
 @media (max-width: 576px) {
   .about-page .custom-about-title {
     font-size: 2rem; /* Reduce title size */
+  }
+
+  .about-page .custom-about-row {
+    margin-bottom: 1.5rem; /* Reduce spacing between rows */
   }
 
   .about-page .custom-about-text h2 {
@@ -479,15 +544,140 @@ nav.navbar .nav-link:hover {
     font-size: 0.85rem;
   }
 
-  .about-page .custom-about-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  .about-page .custom-about-image img {
+    width: 10%; /* Even smaller images on mobile */
+  }
+  .about-page .icon-feature img.feature-icon {
+    width: 30px; /* Smaller icons on mobile */
+    height: 30px;
   }
 
-  .about-page .custom-about-row {
-    margin-bottom: 1.5rem; /* Reduce spacing between rows */
+  .about-page .icon-feature p {
+    font-size: 0.8rem;
   }
 }
+/* Custom Project Card Styling */
+.custom-card {
+  height: 400px !important; /* Override Bootstrap's height */
+  background-size: cover !important; /* Ensure the image covers the card */
+  background-position: center !important; /* Center the image */
+  background-repeat: no-repeat !important; /* Prevent image repetition */
+  display: block !important;
+  border-radius: 10px; /* Add rounded corners */
+  border: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px !important; /* Space between card and details */
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Row Spacing for Projects */
+.custom-project-row {
+  margin-bottom: 40px !important; /* Add space between rows */
+  row-gap: 20px; /* Add vertical space between items within the row */
+}
+
+/* Project Details Below Card */
+.project-details {
+  background: #f9f9f9; /* Light background for better readability */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.project-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.project-details ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+}
+
+.project-details ul li {
+  margin-bottom: 5px;
+}
+
+/* Responsive Styling */
+
+/* Medium Devices (Tablets, 768px and above) */
+@media (max-width: 992px) {
+  .custom-card {
+    height: 350px !important; /* Adjust height for medium devices */
+  }
+
+  .custom-project-row {
+    margin-bottom: 30px !important; /* Adjust row spacing for medium devices */
+  }
+
+  .project-details h3 {
+    font-size: 1.3rem; /* Slightly smaller title */
+  }
+
+  .project-details p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
+/* Small Devices (Phones, 576px and above) */
+@media (max-width: 768px) {
+  .custom-card {
+    height: 300px !important; /* Adjust height for small devices */
+  }
+
+  .custom-project-row {
+    margin-bottom: 20px !important; /* Adjust row spacing for small devices */
+  }
+
+  .project-details h3 {
+    font-size: 1.2rem; /* Smaller title for small screens */
+  }
+
+  .project-details p {
+    font-size: 0.85rem; /* Smaller text for small screens */
+  }
+}
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 576px) {
+  .custom-card {
+    height: 250px !important; /* Adjust height for extra small devices */
+  }
+
+  .custom-project-row {
+    margin-bottom: 15px !important; /* Adjust row spacing for extra small devices */
+  }
+
+  .project-details {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .project-details h3 {
+    font-size: 1rem; /* Adjust title size */
+  }
+
+  .project-details p {
+    font-size: 0.8rem; /* Adjust text size */
+  }
+}
+
 
 
 /* Services Section */
@@ -525,7 +715,7 @@ nav.navbar .nav-link:hover {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: #000000;
+  background-color: #55baf5;
 }
 
 /* Card Image Styling */
