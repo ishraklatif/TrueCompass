@@ -2209,6 +2209,7 @@ nav.navbar .nav-link:hover {
   object-fit: contain; /* Ensure the image is fully visible within the area */
   margin: 0 auto; /* Center the image */
   display: block; /* Ensure the image is centered */
+  filter: none !important; 
 }
 
 /* Card content styling */
