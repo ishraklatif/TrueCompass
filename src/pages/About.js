@@ -46,26 +46,7 @@ function About() {
     { src: reductionIcon, alt: "Process Optimization", label: "Process Optimization" },
   ];
 
-  const projects = [
-    {
-      title: 'Pathao - Flexible Development Support',
-      content: 'Pathao hired developers on flexible hourly rates from us to work on product development which reduced their operations cost by 70%.',
-      link: '/services/ites',
-      img: img1,
-    },
-    {
-      title: 'Shohoz',
-      content: 'True Compass surpassed expectations providing an outstanding set of engineers.',
-      link: '/services/outs',
-      img: img2,
-    },
-    {
-      title: 'Finlay',
-      content: 'True Compass Limited has the best marketing services that boosted sales significantly.',
-      link: '/services/bpo',
-      img: img3,
-    },
-  ];
+
   
 
   return (
