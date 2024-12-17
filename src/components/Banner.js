@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import TrackVisibility from 'react-on-screen';
 
-import bannerImage from '../assets/img/banner.jpg'; // Import the banner image
+import bannerImage from '../assets/img/banner.webp'; // Import the banner image
 
 export const Banner = React.memo(({ rotateTextArray, fixedHeading, showSubtext }) => {
   const [loopNum, setLoopNum] = useState(0);
